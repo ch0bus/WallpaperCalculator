@@ -25,33 +25,13 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.chart.PieChart.Data;
 import javafx.scene.control.Alert.AlertType;                                    // for tip
 import javafx.stage.*; 
-//import javafx.geometry.*; 
-//import javafx.geometry.Side;
-//import javafx.geometry.VPos;                                                    // for header
-import javafx.scene.effect.Light;                                               // for header
-import javafx.scene.effect.Lighting;                                            // for header
-import javafx.scene.text.Font;                                                  // for header
+import javafx.scene.text.Font;                                                  
 import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;                                            // for header
-import javafx.scene.text.Text;                                                  // for header
+import javafx.scene.text.FontWeight;                                            
+import javafx.scene.text.Text;                                                  
 import javafx.scene.image.*;
 
-
-
-
-
-//import javafx.scene.effect.BlurType;                                          // for header shadow
-//import javafx.scene.effect.DropShadow;                                        // for header shadow
-
-/**
- *
- * @author Администратор
- */
-
 public class NeedRoll extends Application {
-    
-    //String path="d:\\compscience\\WorkSpace\\GIT\\needroll\\needroll_dev\\NeedRoll\\src\\needroll\\img\\";
-    String path="d:\\workSpace\\progect\\needroll_dev\\NeedRoll\\src\\needroll\\img\\";
     
     static String selectUsedAreaName = "";
     static double selectUsedAreaValue;
@@ -119,201 +99,86 @@ public class NeedRoll extends Application {
         // Room Parameter
 	Text roomParam = setTextStyle_forHeader("Room parameter");
         roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,22));  
-        // translate to rus
-        //Image roomParam_rus = new Image(new FileInputStream(path+"roomParameterIntro.png"));
-        //ImageView roomParam = new ImageView(roomParam_rus);
         GridPane.setHalignment(roomParam, HPos.CENTER);
         
         Text roomWidth = setTextStyle_forNameParameter("width:");
-        // translate to rus
-        //Image imageRoomWidth_rus = new Image(new FileInputStream(path+"roomWidth.png"));
-        //ImageView roomWidth = new ImageView(imageRoomWidth_rus);
         GridPane.setHalignment(roomWidth, HPos.RIGHT);
         
         Text roomLength = setTextStyle_forNameParameter("length:");
-        //Image imageRoomLength_rus = new Image(new FileInputStream(path+"roomLength.png"));
-        //ImageView roomLength = new ImageView(imageRoomLength_rus);
         GridPane.setHalignment(roomLength, HPos.RIGHT);
         
         Text roomHeight = setTextStyle_forNameParameter("height:");
-        // translate to rus
-        //Image imageRoomHeight_rus = new Image(new FileInputStream(path+"roomHeight.png"));
-        //ImageView roomHeight = new ImageView(imageRoomHeight_rus);
         GridPane.setHalignment(roomHeight, HPos.RIGHT);
         
         Text windowParam = setTextStyle_forNameSpace("Window parameter");
-        // translate to rus
-        //Image windowParam_rus = new Image(new FileInputStream(path+"windowParameter.png"));
-        //ImageView windowParam = new ImageView(windowParam_rus);
         GridPane.setHalignment(windowParam, HPos.LEFT);
         
         Text windowWidth = setTextStyle_forNameParameter("width:");
-        // translate to rus
-	//Image imageWindowWidth_rus = new Image(new FileInputStream(path+"windowWidth.png"));
-        //ImageView windowWidth = new ImageView(imageWindowWidth_rus);
         GridPane.setHalignment(windowWidth, HPos.RIGHT);
         
         Text windowHeight = setTextStyle_forNameParameter("height:");
-        // translate to rus
-	//Image imageWindowHeight_rus = new Image(new FileInputStream(path+"WindowHeight.png"));
-        //ImageView windowHeight = new ImageView(imageWindowHeight_rus);
         GridPane.setHalignment(windowHeight, HPos.RIGHT);
         
         Text windowOfNum = setTextStyle_forNameParameter("number:");
-        // translate to rus
-	//Image imageWindowOfNum_rus = new Image(new FileInputStream(path+"windowNumOf.png"));
-        //ImageView windowOfNum = new ImageView(imageWindowOfNum_rus);
         GridPane.setHalignment(windowOfNum, HPos.RIGHT);
         
         Text doorParam = setTextStyle_forNameSpace("Door Parameter:");
-        // translate to rus
-        //Image doorParam_rus = new Image(new FileInputStream(path+"doorParameter.png"));
-        //ImageView doorParam = new ImageView(doorParam_rus);
         GridPane.setHalignment(doorParam, HPos.LEFT);
         
         Text doorWidth = setTextStyle_forNameParameter("width:");
-        // translate to rus
-        //Image imageDoorWidth_rus = new Image(new FileInputStream(path+"doorWidth.png"));
-        //ImageView doorWidth = new ImageView(imageDoorWidth_rus);
         GridPane.setHalignment(doorWidth, HPos.RIGHT);
         
         Text doorHeight = setTextStyle_forNameParameter("height:");
-        // translate to rus
-        //Image imageDoorHeight_rus = new Image(new FileInputStream(path+"doorHeight.png"));
-        //ImageView doorHeight = new ImageView(imageDoorHeight_rus);
         GridPane.setHalignment(doorHeight, HPos.RIGHT);
         
         Text doorOfNum = setTextStyle_forNameParameter("number:");
-        // translate to rus
-        //Image imageDoorOfNum_rus = new Image(new FileInputStream(path+"doorNumOf.png"));
-        //ImageView doorOfNum = new ImageView(imageDoorOfNum_rus);
         GridPane.setHalignment(doorOfNum, HPos.RIGHT);
         
         Text addParam = setTextStyle_forNameSpace("Add area:");
-        // translate to rus
-        //Image addParam_rus = new Image(new FileInputStream(path+"addParameter.png"));
-        //ImageView addParam = new ImageView(addParam_rus);
         GridPane.setHalignment(addParam, HPos.LEFT);
     
         Text addWidth = setTextStyle_forNameParameter("width:");
-        // translate to rus
-        //Image imageAddWidth_rus = new Image(new FileInputStream(path+"addWidth.png"));
-        //ImageView addWidth = new ImageView(imageAddWidth_rus);
         GridPane.setHalignment(addWidth, HPos.RIGHT);
         
         Text addHeight = setTextStyle_forNameParameter("height:");
-        // translate to rus
-        //Image imageAddHeight_rus = new Image(new FileInputStream(path+"addHeight.png"));
-        //ImageView addHeight = new ImageView(imageAddHeight_rus);
         GridPane.setHalignment(addHeight, HPos.RIGHT);
         
         Text addOfNum = setTextStyle_forNameParameter("number:");
-        // translate to rus
-        //Image imageAddOfNum_rus = new Image(new FileInputStream(path+"addNumOf.png"));
-        //ImageView addOfNum = new ImageView(imageAddOfNum_rus);
         GridPane.setHalignment(addOfNum, HPos.RIGHT);
         
         Text delParam = setTextStyle_forNameSpace("Delete area:");
-        // translate to rus
-        //Image delParam_rus = new Image(new FileInputStream(path+"delParameter.png"));
-        //ImageView delParam = new ImageView(delParam_rus);
         GridPane.setHalignment(delParam, HPos.LEFT);
         
         Text delWidth = setTextStyle_forNameParameter("width:");
-        // translate to rus
-        //Image imageDelWidth_rus = new Image(new FileInputStream(path+"delWidth.png"));
-        //ImageView delWidth = new ImageView(imageDelWidth_rus);
         GridPane.setHalignment(delWidth, HPos.RIGHT);
         
         Text delHeight = setTextStyle_forNameParameter("height:");
-        // translate to rus
-        //Image imageDelHeight_rus = new Image(new FileInputStream(path+"delHeight.png"));
-        //ImageView delHeight = new ImageView(imageDelHeight_rus);
         GridPane.setHalignment(delHeight, HPos.RIGHT);
         
         Text delOfNum = setTextStyle_forNameParameter("number:");
-        // translate to rus
-        //Image imageDelOfNum_rus = new Image(new FileInputStream(path+"delNumOf.png"));
-        //ImageView delOfNum = new ImageView(imageDelOfNum_rus);
         GridPane.setHalignment(delOfNum, HPos.RIGHT);
         
         Text wallpaperParam = setTextStyle_forHeader("  Wallpaper parameter:");
-        // translate to rus
-        //Image wallpaperParam_rus = new Image(new FileInputStream(path+"wallpaperParameter.png"));
-        //ImageView wallpaperParam = new ImageView(wallpaperParam_rus);
         GridPane.setHalignment(wallpaperParam, HPos.CENTER);    
     
         Text wallpaperWidth = setTextStyle_forNameParameter("width:");
-        // translate to rus
-        //Image imageWallpaperWidth_rus = new Image(new FileInputStream(path+"wallpaperWidth.png"));
-        //ImageView wallpaperWidth = new ImageView(imageWallpaperWidth_rus);
         GridPane.setHalignment(wallpaperWidth, HPos.RIGHT);
         
         Text wallpaperLength = setTextStyle_forNameParameter("length:");
-        // translate to rus
-        //Image imageWallpaperLength_rus = new Image(new FileInputStream(path+"wallpaperLength.png"));
-        //ImageView wallpaperLength = new ImageView(imageWallpaperLength_rus);
         GridPane.setHalignment(wallpaperLength, HPos.RIGHT);
         
         Text wallpaperRapport = setTextStyle_forNameParameter("rapport:");
-        // translate to rus
-        //Image imageWallpaperRapport_rus = new Image(new FileInputStream(path+"wallpaperRapport.png"));
-        //ImageView wallpaperRapport = new ImageView(imageWallpaperRapport_rus);
         GridPane.setHalignment(wallpaperRapport, HPos.RIGHT);
     
         Text resultAreaTotal = setTextStyle_forTotalInfo("Total area:");
-        // translate to rus
-        //Image areaTotal_rus = new Image(new FileInputStream(path+"resultAreaTotal.png"));
-        //ImageView resultAreaTotal = new ImageView(areaTotal_rus);
-        //GridPane.setHalignment(resultAreaTotal, HPos.RIGHT);
-        
         Text resultAreaGlue = setTextStyle_forTotalInfo("Glue area:");
-        // translate to rus
-        //Image areaGlue_rus = new Image(new FileInputStream(path+"resultAreaGlue.png"));
-        //ImageView resultAreaGlue = new ImageView(areaGlue_rus);
-        //GridPane.setHalignment(resultAreaTotal, HPos.RIGHT);
-        
         Text resultAreaNotGlue = setTextStyle_forTotalInfo("Do not glue area:");
-        // translate to rus
-        //Image areaNotGlue_rus = new Image(new FileInputStream(path+"resultAreaNotGlue.png"));
-        //ImageView resultAreaNotGlue = new ImageView(areaNotGlue_rus);
-        //GridPane.setHalignment(resultAreaTotal, HPos.RIGHT);
-        
         Text resultAreaWallpaper = setTextStyle_forTotalInfo("Wallpaper area:");
-        // translate to rus
-        //Image areaWallpaper_rus = new Image(new FileInputStream(path+"resultAreaWallpaper.png"));
-        //ImageView resultAreaWallpaper = new ImageView(areaWallpaper_rus);
-        //GridPane.setHalignment(resultAreaTotal, HPos.RIGHT);
-        
         Text resultAreaWallpaperRapport = setTextStyle_forTotalInfo("Rapport area:");
-        // translate to rus
-        //Image areaWallpaperRapport_rus = new Image(new FileInputStream(path+"resultAreaWallpaperRapport.png"));
-        //ImageView resultAreaWallpaperRapport = new ImageView(areaWallpaperRapport_rus);
-        //GridPane.setHalignment(resultAreaTotal, HPos.RIGHT);
-        
         Text resultAreaWallpaperTotal = setTextStyle_forTotalInfo("Used area:");
-        // translate to rus
-        //Image areaWallpaperTotal_rus = new Image(new FileInputStream(path+"resultAreaWallpaperTotal.png"));
-        //ImageView resultAreaWallpaperTotal = new ImageView(areaWallpaperTotal_rus);        
-        //GridPane.setHalignment(resultAreaTotal, HPos.RIGHT);
-        
         Text resultStripOfRoom = setTextStyle_forNameParameter("Strips on Room:");
-        // translate to rus
-        //Image stripRoom_rus = new Image(new FileInputStream(path+"stripRoom.png"));
-        //ImageView resultStripOfRoom = new ImageView(stripRoom_rus);
-        //GridPane.setHalignment(resultStripOfRoom, HPos.RIGHT);
-        
         Text resultStripOfWallpaper = setTextStyle_forNameParameter("Strips from Roll:");
-        // translate to rus
-        //Image stripWallpaper_rus = new Image(new FileInputStream(path+"stripWallpaper.png"));
-        //ImageView resultStripOfWallpaper = new ImageView(stripWallpaper_rus);
-        //GridPane.setHalignment(resultStripOfWallpaper, HPos.RIGHT);
-        
         Text resultTotal = setTextStyle_forResult("Number of Roll:");
-        // translate to rus
-        //Image roll_rus = new Image(new FileInputStream(path+"resultTotal.png"));
-        //ImageView resultTotal = new ImageView(roll_rus);
-        
         
         Label resultAreaTotalValue;
         Label resultAreaGlueValue;
@@ -469,22 +334,14 @@ public class NeedRoll extends Application {
             });
                                                                                                                        
         Text choiceNameAreaVariable_Default = setTextStyle_forInfo("Select the options above to calculate the area of the room");
-        // translate to rus
-        //Image choiceNameAreaVariable = new Image(new FileInputStream(path+"choiceNameAreaVariable_Default.png"));
-        //ImageView choiceNameAreaVariable_Default = new ImageView(choiceNameAreaVariable);
         GridPane.setHalignment(choiceNameAreaVariable_Default, HPos.CENTER);
         
         Text choiceNameAreaVariable_Area = setTextStyle_forInfo("Please enter an area value in the field above");
-        // translate to rus
-        //Image choiceNameAreaVariable_A = new Image(new FileInputStream(path+"choiceNameAreaVariable_Area.png"));
-        //ImageView choiceNameAreaVariable_Area = new ImageView(choiceNameAreaVariable_A);
         GridPane.setHalignment(choiceNameAreaVariable_Area, HPos.CENTER);
         
         ObservableList<String> selectArea = FXCollections.observableArrayList( "perimeter", "room`s area", "glue area");
         ComboBox<String> cbSelectUsedArea = new ComboBox<String> (selectArea);		
             cbSelectUsedArea.setValue("options");				// show default value
-            //cbSelectUsedArea.setEditable(true);
-            //selectUsedAreaName =  cbSelectUsedArea.getValue();                // apply default value
             cbSelectUsedArea.setOnAction(new EventHandler<ActionEvent>(){
 		public void handle(ActionEvent ae){
                     selectUsedAreaName = cbSelectUsedArea.getValue(); 
@@ -523,10 +380,8 @@ public class NeedRoll extends Application {
                 
         ObservableList<String> roomH = FXCollections.observableArrayList( "2.5", "2.7", "3.0", "3.10");
         ComboBox<String> cbRoomHeight = new ComboBox<String> (roomH);		
-            //cbRoomHeight.setValue("2.5");													
             cbRoomHeight.setEditable(true);                                                                                
-            //roomFieldHeight = Double.parseDouble( cbRoomHeight.getValue() );                                            
-		cbRoomHeight.setOnAction(new EventHandler<ActionEvent>(){
+        	cbRoomHeight.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbRoomHeight.getValue());
@@ -544,8 +399,7 @@ public class NeedRoll extends Application {
             ComboBox<String> cbWindowWidth = new ComboBox<String> (windowW);		
 		cbWindowWidth.setValue("1.5");													
 		cbWindowWidth.setEditable(true);                                                                            
-                //windowFieldWidth = Double.parseDouble( cbWindowWidth.getValue() );                                      
-		cbWindowWidth.setOnAction(new EventHandler<ActionEvent>(){
+        	cbWindowWidth.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbWindowWidth.getValue());
@@ -563,8 +417,7 @@ public class NeedRoll extends Application {
             ComboBox<String> cbWindowHeight = new ComboBox<String> (windowH);		
 		cbWindowHeight.setValue("1.3");													
 		cbWindowHeight.setEditable(true);                                                                               
-                //windowFieldHeight = Double.parseDouble( cbWindowHeight.getValue() );                                    
-		cbWindowHeight.setOnAction(new EventHandler<ActionEvent>(){
+        	cbWindowHeight.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbWindowHeight.getValue());
@@ -582,8 +435,7 @@ public class NeedRoll extends Application {
             ComboBox<String> cbWindowOfNum = new ComboBox<String> (wOfNum);		
 		cbWindowOfNum.setValue("1");													
 		cbWindowOfNum.setEditable(true);                                                                                
-                //windowFieldOfNum = Integer.parseInt( cbWindowOfNum.getValue() );                                            
-		cbWindowOfNum.setOnAction(new EventHandler<ActionEvent>(){
+        	cbWindowOfNum.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbWindowOfNum.getValue());
@@ -601,8 +453,7 @@ public class NeedRoll extends Application {
             ComboBox<String> cbDoorWidth = new ComboBox<String> (doorW);		
 		cbDoorWidth.setValue("0.9");													
 		cbDoorWidth.setEditable(true);                                                                              
-                //doorFieldWidth = Double.parseDouble( cbWindowWidth.getValue() );                                            
-		cbDoorWidth.setOnAction(new EventHandler<ActionEvent>(){
+        	cbDoorWidth.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbDoorWidth.getValue());
@@ -620,8 +471,7 @@ public class NeedRoll extends Application {
             ComboBox<String> cbDoorHeight = new ComboBox<String> (doorH);		
 		cbDoorHeight.setValue("2.0");													
 		cbDoorHeight.setEditable(true);                                                                             
-                //doorFieldHeight = Double.parseDouble( cbWindowHeight.getValue() );                                      
-		cbDoorHeight.setOnAction(new EventHandler<ActionEvent>(){
+        	cbDoorHeight.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbDoorHeight.getValue());
@@ -639,8 +489,7 @@ public class NeedRoll extends Application {
             ComboBox<String> cbDoorOfNum = new ComboBox<String> (dOfNum);		
 		cbDoorOfNum.setValue("1");													
 		cbDoorOfNum.setEditable(true);                                                                              
-                //doorFieldOfNum = Integer.parseInt( cbWindowOfNum.getValue() );                                          
-		cbDoorOfNum.setOnAction(new EventHandler<ActionEvent>(){
+        	cbDoorOfNum.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbDoorOfNum.getValue());
@@ -656,10 +505,8 @@ public class NeedRoll extends Application {
                 
         ObservableList<String> wallpWidth = FXCollections.observableArrayList( "0.53", "0.70", "1.06");
             ComboBox<String> cbWallpaperWidth = new ComboBox<String> (wallpWidth);		
-		//cbWallpaperWidth.setValue("0.53");													
 		cbWallpaperWidth.setEditable(true);                                                                     
-                //wallpaperFieldWidth = Double.parseDouble( cbWallpaperWidth.getValue() );
-		cbWallpaperWidth.setOnAction(new EventHandler<ActionEvent>(){
+        	cbWallpaperWidth.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbWallpaperWidth.getValue());
@@ -675,10 +522,8 @@ public class NeedRoll extends Application {
                 
         ObservableList<String> wallpLength = FXCollections.observableArrayList( "10.05", "15.05", "25.05");
             ComboBox<String> cbWallpaperLength = new ComboBox<String> (wallpLength);		
-		//cbWallpaperLength.setValue("10.05");													
 		cbWallpaperLength.setEditable(true);                                                                            
-                //wallpaperFieldLength = Double.parseDouble( cbWallpaperLength.getValue() );                              
-		cbWallpaperLength.setOnAction(new EventHandler<ActionEvent>(){
+        	cbWallpaperLength.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbWallpaperLength.getValue());
@@ -694,10 +539,8 @@ public class NeedRoll extends Application {
                                                                                                                                         
         ObservableList<String> wRapport = FXCollections.observableArrayList( "0.0", "0.10", "0.32", "0.64", "0.80");
             ComboBox<String> cbWallpaperRapport = new ComboBox<String> (wRapport);		
-		//cbWallpaperRapport.setValue("0.64");													
 		cbWallpaperRapport.setEditable(true);                                                                   
-                //wallpaperFieldRapport = Double.parseDouble( cbWallpaperRapport.getValue() );
-		cbWallpaperRapport.setOnAction(new EventHandler<ActionEvent>(){
+        	cbWallpaperRapport.setOnAction(new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent ae){
                             Matcher matUserInput;
                             matUserInput = patUserInput.matcher(cbWallpaperRapport.getValue());
@@ -715,9 +558,6 @@ public class NeedRoll extends Application {
         CheckBox checkAddField = new CheckBox();                                // CheckBox 
         GridPane.setHalignment(checkAddField, HPos.RIGHT);
         Text infoAddField = setTextStyle_forInfo("Select this item to add an area");
-        // translate to rus
-        //Image infoAddField_image = new Image(new FileInputStream(path+"infoAddField.png"));
-        //ImageView infoAddField = new ImageView(infoAddField_image);
         GridPane.setHalignment(infoAddField, HPos.CENTER);
         
         checkAddField.setOnAction(new EventHandler<ActionEvent>(){
@@ -750,10 +590,6 @@ public class NeedRoll extends Application {
         CheckBox checkDelField = new CheckBox();
         GridPane.setHalignment(checkDelField, HPos.RIGHT);
         Text infoDelField = setTextStyle_forInfo("Select this item to delete an area");
-        // translate to rus
-        //Image infoDelField_image = new Image(new FileInputStream(path+"infoDelField.png"));
-        //Image infoDelField_image = new Image(new FileInputStream("d:\\workSpace\\progect\\needroll-v1.0_rus\\NeedRoll\\src\\needroll_rus\\img\\infoDelField.png"));
-        //ImageView infoDelField = new ImageView(infoDelField_image);
         GridPane.setHalignment(infoDelField, HPos.CENTER);
         
         checkDelField.setOnAction(new EventHandler<ActionEvent>(){
@@ -783,12 +619,8 @@ public class NeedRoll extends Application {
             }
         });
         
-        //Label notBruteInfo = new Label("Function \"bruteforce\" can not be performed in \"glue area\" mode.");
-        //GridPane.setHalignment(notBruteInfo, HPos.CENTER);
-        Image notBruteInfo_img = new Image(new FileInputStream(path+"notBruteforceInfo.png"));
-        ImageView notBruteInfo = new ImageView(notBruteInfo_img);
+        Text notBruteInfo = setTextStyle_forInfo("Function \"bruteforce\" can not be performed in \"glue area\" mode.");
         GridPane.setHalignment(notBruteInfo, HPos.CENTER);
-        
         
         CheckBox checkBruteForce = new CheckBox("bruteforce");
         GridPane.setHalignment(checkBruteForce, HPos.LEFT);
@@ -800,7 +632,6 @@ public class NeedRoll extends Application {
                      }
                     else{
                         root.add(resultTotalValueRoll_bruteforce, 3,24);
-                        //root.getChildren().remove();
                         root.add(resultStripOfRoom, 4,24);
                         root.add(resultStripOfWallpaper, 4,25);
                         root.add(resultStripOfRoomValue, 5,24);
@@ -819,10 +650,7 @@ public class NeedRoll extends Application {
             }
         });
                                                                                         
-        Image btnDiscard_img = new Image(new FileInputStream(path+"btnDiscard.png")); // clear all fields
-        ImageView btnDiscard_image = new ImageView(btnDiscard_img);
-        Button btnDiscard = new Button();
-        btnDiscard.setGraphic(btnDiscard_image);  
+        Button btnDiscard = new Button("Discard");
         btnDiscard.setMaxWidth(100);
         GridPane.setHalignment(btnDiscard, HPos.RIGHT);
         btnDiscard.setOnAction(new EventHandler<ActionEvent>() { 
@@ -879,10 +707,7 @@ public class NeedRoll extends Application {
         });
 ////////////////////////////////////////////////////////////////////////////////
 //////////////////////CALCULATOR////////////////////////////////////////////////
-        Image btnCalc_img = new Image(new FileInputStream(path+"btnCalculate.png"));
-        ImageView btnCalc_image = new ImageView(btnCalc_img);
-        //Button btnCalc = new Button ();                              
-        btnCalc.setGraphic(btnCalc_image);  
+        btnCalc = new Button ("Calculate");                              
         btnCalc.setMaxWidth(100);
         GridPane.setHalignment(btnCalc, HPos.LEFT);
         btnCalc.setOnAction(new EventHandler<ActionEvent>(){
@@ -928,21 +753,18 @@ public class NeedRoll extends Application {
                 circleRoom.setFill(Color.RED);
             break;
             case "perimeter":
-                //circleRoom.setFill(Color.GRAY);
                 if(roomFieldWidth==0 || roomFieldHeight==0)
                     circleRoom.setFill(Color.RED);
                 else
                     circleRoom.setFill(Color.ORANGE);
             break;
             case "room`s area":
-                //circleRoom.setFill(Color.GRAY);
                 if(roomFieldWidth==0 || roomFieldHeight==0)
                     circleRoom.setFill(Color.RED);
                 else
                     circleRoom.setFill(Color.ORANGE);
             break;
             case "glue area":
-                //circleRoom.setFill(Color.GRAY);
                 if(selectUsedAreaValue==0 || roomFieldHeight==0)
                     circleRoom.setFill(Color.RED);
                 else
@@ -1019,7 +841,6 @@ public class NeedRoll extends Application {
                 resultStripOfWallpaperValue.setText(stripWallpaper_decimal);
                 
                 root.add(checkBruteForce, 2,24);
-                //root.add(resultTotalValueRoll_bruteforce, 2,24);
             }
         }); // end button hundler
        
@@ -1030,10 +851,7 @@ public class NeedRoll extends Application {
 ///////////////////////button///////////////////////////////////////////////////
         
         
-        Image btnViewLog_img = new Image(new FileInputStream(path+"btnViewLog.png"));
-        ImageView btnViewLog_image = new ImageView(btnViewLog_img);
-        Button btnViewLog = new Button ();                              
-        btnViewLog.setGraphic(btnViewLog_image);  
+        Button btnViewLog = new Button ("Details");                              
         btnViewLog.setMaxWidth(100);
         GridPane.setHalignment(btnViewLog, HPos.LEFT);
             btnViewLog.setOnAction(new EventHandler<ActionEvent>() { 
@@ -1050,7 +868,7 @@ public class NeedRoll extends Application {
                 
                 PieChart piechartLog = new PieChart();
                 piechartLog.setData(getChartData());
-    //--------------------------------------------------------------------------
+    
                 DecimalFormat decimalFormat = new DecimalFormat( "#.##" );
                 String roll_decimal = decimalFormat.format(roll);
                 String roll_bruteforce_decimal = decimalFormat.format(roll_bruteforce);
@@ -1103,9 +921,7 @@ public class NeedRoll extends Application {
                 AreaWallpaperTotalValue.setText(areaTotalWallpaper_decimal);
                 StripOfRoomValue.setText(stripRoom_decimal);
                 StripOfWallpaperValue.setText(stripWallpaper_decimal);
-    //--------------------------------------------------------------------------
-                
-    //--------------------------------------------------------------------------
+    
                 Label headerLog = new Label("  ");
                 GridPane.setHalignment(headerLog, HPos.CENTER);
                 Label headerLog_bottom = new Label("  ");
@@ -1130,36 +946,36 @@ public class NeedRoll extends Application {
                 Text roomLabelTotalInfo_space = setTextStyleLogWindow_forTopPrameter("Space");
                 Text roomLabelTotalInfo_del = setTextStyleLogWindow_forTopPrameter("Del area");
                 Text wallpaperLabelTotalInfo = setTextStyleLogWindow_forHeader("WALLPAPER");                
-                    wallpaperLabelTotalInfo.setFill(Color.BROWN);// setting colour of the text to blue   
+                    wallpaperLabelTotalInfo.setFill(Color.BROWN);
                 Text wallpaperLabelTotalInfo_total = new Text();
                 wallpaperLabelTotalInfo_total.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-                wallpaperLabelTotalInfo_total.setFill(Color.GREEN);// setting colour of the text to blue   
-                wallpaperLabelTotalInfo_total.setStroke(Color.BLACK); // setting the stroke for the text    
-                wallpaperLabelTotalInfo_total.setStrokeWidth(0.5); // setting stroke width to 2           
+                wallpaperLabelTotalInfo_total.setFill(Color.GREEN);
+                wallpaperLabelTotalInfo_total.setStroke(Color.BLACK); 
+                wallpaperLabelTotalInfo_total.setStrokeWidth(0.5); 
                 wallpaperLabelTotalInfo_total.setText("Total");
                 Text wallpaperLabelTotalInfo_glue = new Text();
                 wallpaperLabelTotalInfo_glue.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-                wallpaperLabelTotalInfo_glue.setFill(Color.GREEN);// setting colour of the text to blue   
-                wallpaperLabelTotalInfo_glue.setStroke(Color.BLACK); // setting the stroke for the text    
-                wallpaperLabelTotalInfo_glue.setStrokeWidth(0.5); // setting stroke width to 2           
+                wallpaperLabelTotalInfo_glue.setFill(Color.GREEN);
+                wallpaperLabelTotalInfo_glue.setStroke(Color.BLACK);
+                wallpaperLabelTotalInfo_glue.setStrokeWidth(0.5); 
                 wallpaperLabelTotalInfo_glue.setText("Glue");
                 Text wallpaperLabelTotalInfo_rapport = new Text();
                 wallpaperLabelTotalInfo_rapport.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-                wallpaperLabelTotalInfo_rapport.setFill(Color.GREEN);// setting colour of the text to blue   
-                wallpaperLabelTotalInfo_rapport.setStroke(Color.BLACK); // setting the stroke for the text    
-                wallpaperLabelTotalInfo_rapport.setStrokeWidth(0.5); // setting stroke width to 2           
+                wallpaperLabelTotalInfo_rapport.setFill(Color.GREEN);
+                wallpaperLabelTotalInfo_rapport.setStroke(Color.BLACK); 
+                wallpaperLabelTotalInfo_rapport.setStrokeWidth(0.5);
                 wallpaperLabelTotalInfo_rapport.setText("Rapport");
                 Text wallpaperLabelTotalInfo_stripR = new Text();
                 wallpaperLabelTotalInfo_stripR.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-                wallpaperLabelTotalInfo_stripR.setFill(Color.GREEN);// setting colour of the text to blue   
-                wallpaperLabelTotalInfo_stripR.setStroke(Color.BLACK); // setting the stroke for the text    
-                wallpaperLabelTotalInfo_stripR.setStrokeWidth(0.5); // setting stroke width to 2           
+                wallpaperLabelTotalInfo_stripR.setFill(Color.GREEN);
+                wallpaperLabelTotalInfo_stripR.setStroke(Color.BLACK); 
+                wallpaperLabelTotalInfo_stripR.setStrokeWidth(0.5); 
                 wallpaperLabelTotalInfo_stripR.setText("Strip R");
                 Text wallpaperLabelTotalInfo_stripW = new Text();
                 wallpaperLabelTotalInfo_stripW.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-                wallpaperLabelTotalInfo_stripW.setFill(Color.GREEN);// setting colour of the text to blue   
-                wallpaperLabelTotalInfo_stripW.setStroke(Color.BLACK); // setting the stroke for the text    
-                wallpaperLabelTotalInfo_stripW.setStrokeWidth(0.5); // setting stroke width to 2           
+                wallpaperLabelTotalInfo_stripW.setFill(Color.GREEN);
+                wallpaperLabelTotalInfo_stripW.setStroke(Color.BLACK); 
+                wallpaperLabelTotalInfo_stripW.setStrokeWidth(0.5);
                 wallpaperLabelTotalInfo_stripW.setText("Strip W");
                 Text totalRollLabelInfo = setTextStyleLogWindow_forHeader("[ Need Roll ]");
                 Text totalRollLabel_usingArea = setTextStyleLogWindow_forNameSpace("< using glue area >");
@@ -1303,10 +1119,7 @@ public class NeedRoll extends Application {
             }
         });
         
-        Image btnExit_img = new Image(new FileInputStream(path+"btnExit.png"));
-        ImageView btnExit_image = new ImageView(btnExit_img);
-        Button btnExit = new Button ();                              
-        btnExit.setGraphic(btnExit_image);  
+        Button btnExit = new Button ("Exit");                              
         btnExit.setMaxWidth(100);
         GridPane.setHalignment(btnExit, HPos.LEFT);        
         btnExit.setOnAction(new EventHandler<ActionEvent>() { 
@@ -1480,9 +1293,9 @@ public static void main(String[] args) {
     public Text setTextStyle_forNameParameter(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-            roomParam.setFill(Color.BLACK);// setting colour of the text to blue   
-            roomParam.setStroke(Color.GRAY); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.BLACK);
+            roomParam.setStroke(Color.GRAY);
+            roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1490,9 +1303,9 @@ public static void main(String[] args) {
     public Text setTextStyle_forHeader(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,20));  
-            roomParam.setFill(Color.ORANGE);// setting colour of the text to blue   
-            roomParam.setStroke(Color.BLACK); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.ORANGE);
+            roomParam.setStroke(Color.BLACK);
+            roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1500,9 +1313,9 @@ public static void main(String[] args) {
     public Text setTextStyle_forNameSpace(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,17));  
-            roomParam.setFill(Color.GREEN);// setting colour of the text to blue   
-            roomParam.setStroke(Color.GRAY); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.GREEN);
+            roomParam.setStroke(Color.GRAY);
+            roomParam.setStrokeWidth(0.5);
             roomParam.setText(str);
         return roomParam;
     }
@@ -1510,9 +1323,9 @@ public static void main(String[] args) {
     public Text setTextStyle_forTotalInfo(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,15));  
-            roomParam.setFill(Color.BLACK);// setting colour of the text to blue   
-            //roomParam.setStroke(Color.BLACK); // setting the stroke for the text    
-            //roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.BLACK);
+            //roomParam.setStroke(Color.BLACK); 
+            //roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1520,9 +1333,9 @@ public static void main(String[] args) {
     public Text setTextStyle_forInfo(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,15));  
-            roomParam.setFill(Color.GRAY);// setting colour of the text to blue   
-            //roomParam.setStroke(Color.BLACK); // setting the stroke for the text    
-            //roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.GRAY);
+            //roomParam.setStroke(Color.BLACK); 
+            //roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1530,9 +1343,9 @@ public static void main(String[] args) {
     public Text setTextStyle_forResult(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,17));  
-            roomParam.setFill(Color.GREEN);// setting colour of the text to blue   
-            roomParam.setStroke(Color.GRAY); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.GREEN);
+            roomParam.setStroke(Color.GRAY); 
+            roomParam.setStrokeWidth(0.5);
             roomParam.setText(str);
         return roomParam;
     }
@@ -1540,9 +1353,9 @@ public static void main(String[] args) {
     public Text setTextStyleLogWindow_forTopPrameter(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.NORMAL,FontPosture.REGULAR,15));  
-            roomParam.setFill(Color.GREEN);// setting colour of the text to blue   
-            roomParam.setStroke(Color.BLACK); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.GREEN);
+            roomParam.setStroke(Color.BLACK);
+            roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1550,9 +1363,9 @@ public static void main(String[] args) {
     public Text setTextStyleLogWindow_forHeader(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,17));  
-            roomParam.setFill(Color.ORANGE);// setting colour of the text to blue   
-            roomParam.setStroke(Color.BLACK); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.ORANGE);
+            roomParam.setStroke(Color.BLACK);
+            roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1560,9 +1373,9 @@ public static void main(String[] args) {
     public Text setTextStyleLogWindow_forNameSpace(String str){
         Text roomParam = new Text();
             roomParam.setFont(Font.font("Monospaced",FontWeight.BOLD,FontPosture.REGULAR,17));  
-            roomParam.setFill(Color.GREEN);// setting colour of the text to blue   
-            roomParam.setStroke(Color.GRAY); // setting the stroke for the text    
-            roomParam.setStrokeWidth(0.5); // setting stroke width to 2           
+            roomParam.setFill(Color.GREEN);
+            roomParam.setStroke(Color.GRAY);
+            roomParam.setStrokeWidth(0.5); 
             roomParam.setText(str);
         return roomParam;
     }
@@ -1576,6 +1389,6 @@ public static void main(String[] args) {
             alert.showAndWait();
     }
     
-} // end main class
+} // end
 
 
